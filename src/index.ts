@@ -10,7 +10,9 @@ export class Throttler {
         this.handler = () => {
             if (this.pending !== undefined) {
                 this.pending();
+                this.pending = undefined;
             }
+            this.timer = undefined;
         };
     }
 
