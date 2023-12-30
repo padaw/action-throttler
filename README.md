@@ -35,7 +35,7 @@ throttler.push(() => {
 Cancel the current pending action and the timer (if there is any), and set a timer for this action instead.
 
 ```js
-throttler.push(() => {
+throttler.reset(() => {
     console.log("this will be called after a newly set timeout");
 });
 ```
