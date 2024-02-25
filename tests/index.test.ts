@@ -11,12 +11,12 @@ it("Doesn't exceed the timeout in executing push() actions", async () => {
         });
     }, 10);
 
-    let res = await new Promise<number>((res) => {
+    const res = await new Promise<number>((res) => {
         setTimeout(() => {
             clearInterval(int);
             res(n);
         }, 150);
     });
 
-    expect(res).toBe(1)
+    expect(res).toBe(1);
 });
